@@ -51,15 +51,13 @@ async function connect(opts) {
   opts = defaults(opts);
   validate(opts);
   await wasmPromise;
-  return ngrokListenAndForward({ authtoken: opts.authtoken, addr: `http://localhost:${opts.port}`, hostname: opts.hostname })
+  return connectRetry({ authtoken: opts.authtoken, addr: `http://localhost:${opts.port}`, hostname: opts.hostname })
 }
 
 async function connectRetry(opts, retryCount = 0) {
   opts.name = String(opts.name || uuid.v4());
   try {
-    const response = await ngrokClient.startTunnel(opts);
-    console.log("response", response);
-    return response.public_url;
+    return ngrokListenAndForward(opts);
   } catch (err) {
     if (!isRetriable(err) || retryCount >= 100) {
       throw err;
