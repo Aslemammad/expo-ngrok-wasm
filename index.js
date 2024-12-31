@@ -21,14 +21,9 @@ const wasmPath = `${ngrokGoWasm}/static/ngrok.wasm`;
 const go = new Go();
 const wasmPromise = (async () => {
     const wasmBuffer = await fs.promises.readFile(wasmPath);
-    console.log('wasmBuffer', wasmBuffer)
     const result = await WebAssembly.instantiate(wasmBuffer, go.importObject);
-    console.log('result', result)
     go.run(result.instance);
-})().then((result) => {
-    console.log('result', result)
-});
-
+})()
 // .then(async () => {
 //   const authtoken = "1XoV8Waji8VfVfAmKxW9sdV8jqB_x9GH3hgsF6CiKSUztAfn";
 //   const backendURL = "http://localhost:8000";
@@ -55,9 +50,6 @@ let ngrokClient = null;
 async function connect(opts) {
   opts = defaults(opts);
   validate(opts);
-  if (opts.authtoken) {
-    await setAuthtoken(opts);
-  }
   await wasmPromise;
   return ngrokListenAndForward({ authtoken: opts.authtoken, addr: `http://localhost:${opts.port}`, hostname: opts.hostname })
 }
