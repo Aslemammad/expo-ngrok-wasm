@@ -9,11 +9,12 @@ const {
 } = require("./src/process");
 const fs = require("fs");
 const { defaults, validate, isRetriable } = require("./src/utils");
-require("/Users/mohammadbagherabiyat/oss/ngrok-go/examples/wasm/static/wasm_exec.js");
+const { dirname } = require("path");
 
 // require("/Users/mohammadbagherabiyat/oss/ngrok-go/examples/wasm/static/");
-const wasm = fs.readFileSync("/Users/mohammadbagherabiyat/oss/ngrok-go/examples/wasm/static/ngrok.wasm");
-
+const ngrokGoWasm = dirname(require.resolve("ngrok-go-wasm/package.json"))
+require(`${ngrokGoWasm}/static/wasm_exec.js`);
+const wasm = fs.readFileSync(`${ngrokGoWasm}/static/ngrok.wasm`);
 
 // .then(async () => {
 //   const authtoken = "1XoV8Waji8VfVfAmKxW9sdV8jqB_x9GH3hgsF6CiKSUztAfn";

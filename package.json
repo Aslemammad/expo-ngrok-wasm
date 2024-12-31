@@ -38,7 +38,9 @@
   },
   "dependencies": {
     "@expo/ngrok-bin": "2.3.42",
+    "expo-ngrok-wasm": "https://pkg.pr.new/Aslemammad/ngrok-go-wasm/expo-ngrok-wasm@abeba1c",
     "got": "^11.5.1",
+    "ngrok-go-wasm": "https://pkg.pr.new/Aslemammad/ngrok-go-wasm@f11edd8",
     "uuid": "^3.3.2",
     "yaml": "^1.10.0"
   },
