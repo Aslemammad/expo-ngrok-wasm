@@ -7,7 +7,35 @@ const {
   setAuthtoken,
   getVersion,
 } = require("./src/process");
+const fs = require("fs");
 const { defaults, validate, isRetriable } = require("./src/utils");
+require("/Users/mohammadbagherabiyat/oss/ngrok-go/examples/wasm/static/wasm_exec.js");
+
+// require("/Users/mohammadbagherabiyat/oss/ngrok-go/examples/wasm/static/");
+const wasm = fs.readFileSync("/Users/mohammadbagherabiyat/oss/ngrok-go/examples/wasm/static/ngrok.wasm");
+
+
+// .then(async () => {
+//   const authtoken = "1XoV8Waji8VfVfAmKxW9sdV8jqB_x9GH3hgsF6CiKSUztAfn";
+//   const backendURL = "http://localhost:8000";
+
+//   try {
+//       const url = await ngrokListenAndForward({ authtoken, backendURL });
+//       console.log("result1", result);
+
+//       if (result.error) {
+//           console.error("Error:", result.error);
+//           return;
+//       }
+//       console.log("result", result);
+//   } catch (err) {
+//       console.error("Error:", err);
+//   }
+// }).catch((e) => {
+//   console.log("error", e);
+// });
+const go = new Go();
+const wasmPromise = WebAssembly.instantiate(wasm, go.importObject).then((result) => { go.run(result.instance) })
 
 let processUrl = null;
 let ngrokClient = null;
@@ -18,16 +46,15 @@ async function connect(opts) {
   if (opts.authtoken) {
     await setAuthtoken(opts);
   }
-
-  processUrl = await getProcess(opts);
-  ngrokClient = new NgrokClient(processUrl);
-  return connectRetry(opts);
+  await wasmPromise;
+  return ngrokListenAndForward({ authtoken: opts.authtoken, addr: `http://localhost:${opts.port}`, hostname: opts.hostname })
 }
 
 async function connectRetry(opts, retryCount = 0) {
   opts.name = String(opts.name || uuid.v4());
   try {
     const response = await ngrokClient.startTunnel(opts);
+    console.log("response", response);
     return response.public_url;
   } catch (err) {
     if (!isRetriable(err) || retryCount >= 100) {

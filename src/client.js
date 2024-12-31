@@ -18,6 +18,7 @@ class NgrokClient {
   }
 
   async request(method, path, options = {}) {
+    console.log("request", method, path, options);
     try {
       if (method === "get") {
         return await this.internalApi

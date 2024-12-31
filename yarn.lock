@@ -57,10 +57,10 @@
   resolved "https://registry.yarnpkg.com/@expo/ngrok-bin-win32-x64/-/ngrok-bin-win32-x64-2.3.41.tgz#91c56b695c9c8d81424a335795e204d7bd011fcf"
   integrity sha512-mncsPRaG462LiYrM8mQT8OYe3/i44m3N/NzUeieYpGi8+pCOo8TIC23kR9P93CVkbM9mmXsy3X6hq91a8FWBdA==
 
-"@expo/ngrok-bin@2.3.41":
-  version "2.3.41"
-  resolved "https://registry.yarnpkg.com/@expo/ngrok-bin/-/ngrok-bin-2.3.41.tgz#f8a2cb73f79e24d0f82a62531ee4597e27bc7fba"
-  integrity sha512-BgEmO2BjA1dDLHdB2yWeiTvNhfFU7RSuDx4GWp435HGb4/IxXt8cAxXpfxN98RFiVIrfiPKufrHinPQLs3ukCg==
+"@expo/ngrok-bin@2.3.42":
+  version "2.3.42"
+  resolved "https://registry.yarnpkg.com/@expo/ngrok-bin/-/ngrok-bin-2.3.42.tgz#bcaa9f77ebb2e0f3b9be3ae99dd66d363242a96b"
+  integrity sha512-kyhORGwv9XpbPeNIrX6QZ9wDVCDOScyTwxeS+ScNmUqYoZqD9LRmEqF7bpDh5VonTsrXgWrGl7wD2++oSHcaTQ==
   optionalDependencies:
     "@expo/ngrok-bin-darwin-arm64" "2.3.41"
     "@expo/ngrok-bin-darwin-x64" "2.3.41"
