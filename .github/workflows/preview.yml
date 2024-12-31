@@ -16,5 +16,5 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: yarn i
+      - run: yarn install
       - run: npx pkg-pr-new publish  
