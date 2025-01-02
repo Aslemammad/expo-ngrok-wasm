@@ -628,9 +628,9 @@ nanoid@3.1.20:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
   integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
 
-"ngrok-go-wasm@https://pkg.pr.new/Aslemammad/ngrok-go-wasm@9837536":
+"ngrok-go-wasm@https://pkg.pr.new/Aslemammad/ngrok-go-wasm@ef13ee4":
   version "0.0.0"
-  resolved "https://pkg.pr.new/Aslemammad/ngrok-go-wasm@9837536#5135b6f988579a4042f533896caa945d5468143a"
+  resolved "https://pkg.pr.new/Aslemammad/ngrok-go-wasm@ef13ee4#ab15a2cddc2d003de35358c86fe9e51e1d81124d"
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
