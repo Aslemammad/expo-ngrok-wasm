@@ -359,10 +359,6 @@ escape-string-regexp@4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-"expo-ngrok-wasm@https://pkg.pr.new/Aslemammad/ngrok-go-wasm/expo-ngrok-wasm@abeba1c":
-  version "0.0.0"
-  resolved "https://pkg.pr.new/Aslemammad/ngrok-go-wasm/expo-ngrok-wasm@abeba1c#7f71a08b3ff047ab336d65dbcde3d32ebcb0def2"
-
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -632,9 +628,9 @@ nanoid@3.1.20:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
   integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
 
-"ngrok-go-wasm@https://pkg.pr.new/Aslemammad/ngrok-go-wasm@f11edd8":
+"ngrok-go-wasm@https://pkg.pr.new/Aslemammad/ngrok-go-wasm@9837536":
   version "0.0.0"
-  resolved "https://pkg.pr.new/Aslemammad/ngrok-go-wasm@f11edd8#43ad67238411ff465151fa5e35575223477cc5ca"
+  resolved "https://pkg.pr.new/Aslemammad/ngrok-go-wasm@9837536#5135b6f988579a4042f533896caa945d5468143a"
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
